@@ -50,6 +50,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const despertarBtn = document.querySelector(".despertar-btn");
     const revelarBtn = document.querySelector(".revelar-btn");
 
-   
+    if (!audio) return;
+
+    audio.volume = 0.3;
+    audio.loop = true;
+
+    if (despertarBtn) {
+        despertarBtn.addEventListener("click", () => {
+            audio.play().catch(() => {
+                // Evita error si el navegador bloquea autoplay
+            });
+        });
+    }
+
+    if (revelarBtn) {
+        revelarBtn.addEventListener("click", () => {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+    }
 
 });
