@@ -139,3 +139,74 @@ input[type="radio"]:focus + label {
     50% { transform: scaleX(1); }
     100% { transform: scaleX(0.6); }
 }
+
+.cyber-text {
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.cyber-buttons {
+    margin-top: 2rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-primary {
+    border: 2px solid #3dfcff;
+    color: #3dfcff;
+}
+
+.btn-primary:hover {
+    background: #3dfcff;
+    color: #070a16;
+    box-shadow: 0 0 25px #3dfcff;
+}
+
+.btn-secondary {
+    border: 2px solid #ff2e88;
+    color: #ff2e88;
+}
+
+.btn-secondary:hover {
+    background: #ff2e88;
+    color: #070a16;
+    box-shadow: 0 0 25px #ff2e88;
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.option-card:active {
+    transform: scale(0.97);
+}
+
+.neon-square,
+.neon-circle {
+    will-change: transform;
+}
+
+.neon-square {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #3dfcff;
+    box-shadow: 0 0 30px #3dfcff;
+    animation: float 4s ease-in-out infinite;
+}
+
+.neon-circle {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ff2e88;
+    border-radius: 50%;
+    margin-top: 2rem;
+    box-shadow: 0 0 30px #ff2e88;
+    animation: float 5s ease-in-out infinite reverse;
+}

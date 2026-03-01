@@ -18,5 +18,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    const radios = document.querySelectorAll('input[name="energia"]');
+    const cards = document.querySelectorAll('.destino-card');
+    const placeholder = document.querySelector('.destino-placeholder');
+
+    function ocultarCards() {
+        cards.forEach(card => {
+            card.style.display = "none";
+        });
+    }
+
+    radios.forEach(radio => {
+        radio.addEventListener("change", function () {
+
+            ocultarCards();
+
+            if (placeholder) {
+                placeholder.style.display = "none";
+            }
+
+            const selectedCard = document.querySelector(`.destino-card.${this.id}`);
+
+            if (selectedCard) {
+                selectedCard.style.display = "block";
+            }
+        });
+    });
+
+
 
 });
