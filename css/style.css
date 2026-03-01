@@ -210,3 +210,130 @@ input[type="radio"]:focus + label {
     box-shadow: 0 0 30px #ff2e88;
     animation: float 5s ease-in-out infinite reverse;
 }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.question-section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.question-section h2 {
+    margin-bottom: 3rem;
+}
+
+.options-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.option-card {
+    padding: 1.5rem 3rem;
+    border: 2px solid #3dfcff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-card:hover {
+    background: #3dfcff;
+    color: #070a16;
+    box-shadow: 0 0 20px #3dfcff;
+}
+
+#conexion:checked + label,
+#mente:checked + label,
+#caos:checked + label,
+#oscuridad:checked + label {
+    background: #3dfcff;
+    color: #070a16;
+    box-shadow: 0 0 25px #3dfcff;
+}
+
+.destino-section {
+    padding: 8rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, #070a16 0%, #0a0f25 100%);
+}
+
+.destino-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-shadow: 0 0 20px #9d4edd;
+}
+
+.destino-card {
+    display: none;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem;
+    border: 2px solid #3dfcff;
+    border-radius: 15px;
+    background: #111733;
+    animation: epicReveal 0.8s ease forwards;
+}
+
+@keyframes epicReveal {
+    from { opacity: 0; transform: translateY(40px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.contact-section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.contact-subtitle {
+    margin-bottom: 3rem;
+    opacity: 0.8;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #111733;
+    border: 2px solid #3dfcff;
+    color: white;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 0 15px #3dfcff;
+}
+
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+    border-color: #ff2e88;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+

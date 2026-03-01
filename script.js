@@ -45,6 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+ 
+    const audio = document.getElementById("energiaAudio");
+    const despertarBtn = document.querySelector(".despertar-btn");
+    const revelarBtn = document.querySelector(".revelar-btn");
 
+   
 
 });
