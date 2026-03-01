@@ -57,3 +57,85 @@ body::before {
     will-change: box-shadow;
 }
 
+@keyframes borderPulse {
+    from { box-shadow: 0 0 20px #ff2e88; }
+    to { box-shadow: 0 0 60px #9d4edd; }
+}
+
+.cyber-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.cyber-badge {
+    color: #3dfcff;
+    letter-spacing: 2px;
+}
+
+.cyber-nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #9d4edd;
+    transition: all 0.3s ease;
+}
+
+.cyber-nav a:hover {
+    color: #3dfcff;
+}
+
+.cyber-nav a:focus,
+.btn-primary:focus,
+.btn-secondary:focus,
+input[type="radio"]:focus + label {
+    outline: 2px solid #3dfcff;
+    outline-offset: 4px;
+}
+
+.cyber-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-content {
+    max-width: 500px;
+}
+
+.cyber-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 6rem;
+    line-height: 1;
+    animation: titleGlow 2s infinite alternate;
+    will-change: text-shadow;
+}
+
+@keyframes titleGlow {
+    from { text-shadow: 0 0 20px #ff2e88; }
+    to { text-shadow: 0 0 40px #ff2e88, 0 0 60px #3dfcff; }
+}
+
+.cyber-title span {
+    color: #3dfcff;
+}
+
+.cyber-subtitle {
+    margin-top: 1.5rem;
+    letter-spacing: 6px;
+    color: #9d4edd;
+}
+
+.cyber-line {
+    width: 200px;
+    height: 3px;
+    background: #3dfcff;
+    margin: 2rem 0;
+    box-shadow: 0 0 15px #3dfcff;
+    animation: scan 2s infinite linear;
+}
+
+@keyframes scan {
+    0% { transform: scaleX(0.6); }
+    50% { transform: scaleX(1); }
+    100% { transform: scaleX(0.6); }
+}
