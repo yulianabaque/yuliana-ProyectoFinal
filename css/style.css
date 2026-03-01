@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #070a16;
+    color: white;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#3dfcff12 1px, transparent 1px),
+                      linear-gradient(90deg, #3dfcff12 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: -1;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.cyber-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cyber-card {
+    width: 90%;
+    max-width: 1200px;
+    padding: 5rem 6rem;
+    background: linear-gradient(135deg, #140024, #0b0f1c);
+    border: 2px solid #ff2e88;
+    position: relative;
+    box-shadow: 0 0 40px #ff2e88;
+    animation: borderPulse 3s infinite alternate;
+    will-change: box-shadow;
+}
+
