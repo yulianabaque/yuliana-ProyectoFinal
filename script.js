@@ -58,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (despertarBtn) {
         despertarBtn.addEventListener("click", () => {
             audio.play().catch(() => {
-                // Evita error si el navegador bloquea autoplay
             });
         });
     }
