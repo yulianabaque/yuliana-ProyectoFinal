@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
  
     const audio = document.getElementById("energiaAudio");
     const despertarBtn = document.querySelector(".despertar-btn");
-    const revelarBtn = document.querySelector(".revelar-btn");
+    const descansarBtn = document.querySelector(".descansar-btn");
 
     if (!audio) return;
 
@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    if (revelarBtn) {
-        revelarBtn.addEventListener("click", () => {
+    if (descansarBtn) {
+        descansarBtn.addEventListener("click", () => {
             audio.pause();
             audio.currentTime = 0;
         });
