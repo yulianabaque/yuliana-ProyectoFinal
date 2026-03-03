@@ -227,6 +227,7 @@ input[type="radio"]:focus + label {
 }
 
 .options-wrapper {
+    border: none;
     margin-top: 2rem;
     display: flex;
     justify-content: center;
